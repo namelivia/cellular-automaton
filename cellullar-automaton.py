@@ -17,6 +17,7 @@ class AutomatonGenerator(object):
         parser.add_argument('outer', help='the status of the outer cells', type=int)
         args = parser.parse_args()
         sdl2.ext.init()
+				#TODO: Screen resoultion will be dynamic
         window = sdl2.ext.Window('Cellullar Automaton', size=(800, 600))
         running = True
         window.show()
@@ -46,14 +47,13 @@ class World(object):
     """The world (row of squares) on the cellullar automaton"""
     INITIAL_STATUS = 0
     def __init__(self, surface, width, tile, outer):
-        #print('Initializing world')
         self.outer = outer
         self.cells = []
         self.surface = surface
         self.tile = tile
         for idx in range(0, width):
             self.cells.append(Cell(self.surface, self.INITIAL_STATUS, idx, 0, self.tile))
-        #TODO: This is an initial conf
+        #TODO: Initial configuration will be dynamic
         self.cells[width / 2] = Cell(self.surface, 1, width / 2, 0, self.tile)
 
     def step(self, index):
@@ -95,7 +95,7 @@ class Cell(object):
     @classmethod
     def get_new_status(cls, code):
         """Gets the new status for a cell"""
-        #TODO: Cheesy!
+        #TODO: Rules will be dynamic
         my_dict = {
             '000' : 0,
             '001' : 1,
