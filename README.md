@@ -1,6 +1,6 @@
-# Cellullar automaton
+# Cellular automaton
 
-This is just a simple Python program for generating [cellullar automata](https://en.wikipedia.org/wiki/Cellular_automaton), nothing serious, just for fun.
+This is just a simple Python program for generating [cellular automata](https://en.wikipedia.org/wiki/Cellular_automaton), nothing serious, just for fun.
 Will generate things like this:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/1571416/58010580-eab54a00-7af0-11e9-8fce-c51259ad339b.png" alt="Example output" />
@@ -14,7 +14,7 @@ Will generate things like this:
 
 ## Usage
 
-Usage: `./cellullar-automaton.py [-h] width height tile outer`
+Usage: `./cellular-automaton.py [-h] width height tile outer`
 
 #### Positional arguments:
  * width: the width in tiles of the world.
@@ -26,4 +26,4 @@ Usage: `./cellullar-automaton.py [-h] width height tile outer`
   * -h, --help show this help message and exit.
 
 ## Contributing
-Any suggestion, bug reports, or any other kind enhacements are welcome. Just [open an issue first](https://github.com/namelivia/cellullar-automaton/issues/new) for creating a PR.
+Any suggestion, bug reports, or any other kind enhacements are welcome. Just [open an issue first](https://github.com/namelivia/cellular-automaton/issues/new) for creating a PR.

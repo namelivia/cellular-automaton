@@ -6,7 +6,7 @@ from random import randint
 import sdl2.ext
 
 class AutomatonGenerator(object):
-    """Cellullar automaton generation tool"""
+    """Cellular automaton generation tool"""
     @classmethod
     def run(cls):
         """Configuration, initialization and running the automaton in an endless loop"""
@@ -18,7 +18,7 @@ class AutomatonGenerator(object):
         args = parser.parse_args()
         sdl2.ext.init()
 				#TODO: Screen resoultion will be dynamic
-        window = sdl2.ext.Window('Cellullar Automaton', size=(800, 600))
+        window = sdl2.ext.Window('Cellular Automaton', size=(800, 600))
         running = True
         window.show()
         while running:
@@ -30,7 +30,7 @@ class AutomatonGenerator(object):
             window.refresh()
 
 class Automaton(object):
-    """Unidimensional square cellullar automaton"""
+    """Unidimensional square cellular automaton"""
     def __init__(self, window, width, height, tile, outer):
         self.surface = window.get_surface()
         self.world = World(self.surface, width, tile, outer)
@@ -44,7 +44,7 @@ class Automaton(object):
             self.world.draw()
 
 class World(object):
-    """The world (row of squares) on the cellullar automaton"""
+    """The world (row of squares) on the cellular automaton"""
     INITIAL_STATUS = 0
     def __init__(self, surface, width, tile, outer):
         self.outer = outer
@@ -73,7 +73,7 @@ class World(object):
             val.draw()
 
 class Cell(object):
-    """A cell (square) on the cellullar automaton"""
+    """A cell (square) on the cellular automaton"""
     def __init__(self, surface, initial_status, index, y, tile):
         self.tile = tile
         self.surface = surface
