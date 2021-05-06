@@ -6,15 +6,13 @@ Will generate things like this:
   <img src="https://user-images.githubusercontent.com/1571416/58010580-eab54a00-7af0-11e9-8fce-c51259ad339b.png" alt="Example output" />
 </p>
 
-## Requirements
+## Installing
 
- * Python2.7
- * SDL2 
- * pysdl2
+`pipenv install`
 
 ## Usage
 
-Usage: `./cellular-automaton.py [-h] width height tile outer`
+`pipenv run python cellular-automaton.py [-h] width height tile outer`
 
 #### Positional arguments:
  * width: the width in tiles of the world.
